@@ -13,6 +13,7 @@ export class AddTaskComponent implements OnInit {
   name: string;
   age: number;
   student: boolean = false;
+  school: string;
   showAddTask: boolean;
   subscription: Subscription;
 
@@ -34,7 +35,10 @@ export class AddTaskComponent implements OnInit {
       alert('Please add a student!');
       return;
     }
-
+    if (this.age <1){
+      alert('Age cannot be less than 1.');
+      return;
+    }
     if (this.age > 125) {
       alert('Age cannot be greater than 125.');
       return;
@@ -43,7 +47,8 @@ export class AddTaskComponent implements OnInit {
     const newTask: Students = {
       name: this.name,
       age: this.age,
-      studnet: this.student,
+      student: this.student,
+      school: this.school,
     };
 
     this.onAddTask.emit(newTask);
@@ -51,5 +56,6 @@ export class AddTaskComponent implements OnInit {
     this.name = '';
     this.age = 0;
     this.student = false;
+    this.school='';
   }
 }

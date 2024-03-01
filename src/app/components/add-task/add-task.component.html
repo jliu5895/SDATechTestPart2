@@ -21,14 +21,37 @@
       [max]="50"
     />
   </div>
+  
   <div class="form-control form-control-check">
-    <label for="student">Are you a student?</label>
+    <label>Are you a student?</label>
     <input
-      type="checkbox"
+      type="radio"
       name="student"
       [(ngModel)]="student"
-      id="student"
+      value="yes"
+      id="studentYes"
+    />
+    <label for="studentYes">Yes</label>
+    <input
+      type="radio"
+      name="student"
+      [(ngModel)]="student"
+      value="no"
+      id="studentNo"
+    />
+    <label for="studentNo">No</label>
+  </div>
+
+  <div *ngIf="student === 'yes'" class="form-control">
+    <label for="school">What's your school?</label>
+    <input
+      type="text"
+      name="school"
+      [(ngModel)]="school"
+      id= "school"
+      placeholder="Enter your college..."
     />
   </div>
-  <input type="submit" value="Save Task" class="btn btn-block" />
+
+  <input type="submit" value="Add Submit" class="btn btn-block" />
 </form>

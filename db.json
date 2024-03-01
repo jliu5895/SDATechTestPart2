@@ -4,19 +4,15 @@
       "id": 1,
       "name": "Justin",
       "age": "19",
-      "student": true
+      "student": true,
+      "school": "College of William and Mary"
     },
     {
       "id": 2,
       "name": "Test",
       "age": "20",
-      "student": true
-    },
-    {
-      "id": 3,
-      "name": "Test_2",
-      "age": "15",
-      "student": false
+      "student": false,
+      "school": "College of William and Mary"
     }
   ]
 }

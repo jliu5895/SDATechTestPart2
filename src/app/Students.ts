@@ -2,5 +2,6 @@ export interface Students {
   id?: number;
   name: string;
   age: number;
-  studnet: boolean;
+  student: boolean;
+  school: string;
 }
