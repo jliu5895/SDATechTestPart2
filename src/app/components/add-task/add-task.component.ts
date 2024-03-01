@@ -11,7 +11,7 @@ import { Students } from '../../Students';
 export class AddTaskComponent implements OnInit {
   @Output() onAddTask: EventEmitter<Students> = new EventEmitter();
   name: string;
-  age: string;
+  age: number;
   student: boolean = false;
   showAddTask: boolean;
   subscription: Subscription;
@@ -35,6 +35,11 @@ export class AddTaskComponent implements OnInit {
       return;
     }
 
+    if (this.age > 125) {
+      alert('Age cannot be greater than 125.');
+      return;
+    }
+
     const newTask: Students = {
       name: this.name,
       age: this.age,
@@ -44,7 +49,7 @@ export class AddTaskComponent implements OnInit {
     this.onAddTask.emit(newTask);
 
     this.name = '';
-    this.age = '';
+    this.age = 0;
     this.student = false;
   }
 }

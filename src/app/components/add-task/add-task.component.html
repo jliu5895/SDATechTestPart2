@@ -13,12 +13,12 @@
   <div class="form-control">
     <label for="age">Age</label>
     <input
-      type="text"
+      type="number"
       name="age"
       [(ngModel)]="age"
       id="age"
       placeholder="Age"
-      
+      [max]="50"
     />
   </div>
   <div class="form-control form-control-check">

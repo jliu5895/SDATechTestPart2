@@ -1,6 +1,6 @@
 export interface Students {
   id?: number;
   name: string;
-  age: string;
+  age: number;
   studnet: boolean;
 }
