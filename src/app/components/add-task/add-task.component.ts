@@ -31,6 +31,7 @@ export class AddTaskComponent implements OnInit {
     }
 
   onSubmit() {
+
     if (!this.name) {
       alert('Please add a student!');
       return;

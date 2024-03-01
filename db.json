@@ -13,6 +13,13 @@
       "age": "20",
       "student": false,
       "school": "College of William and Mary"
+    },
+    {
+      "name": "Jason Chan",
+      "age": 35,
+      "student": "yes",
+      "school": "University of Virginia",
+      "id": 3
     }
   ]
 }

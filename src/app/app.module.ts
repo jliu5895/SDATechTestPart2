@@ -13,7 +13,6 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 
 
-
 const appRoutes: Routes = [
   { path: '', component: TasksComponent },
 ];
