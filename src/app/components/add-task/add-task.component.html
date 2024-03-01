@@ -1,0 +1,34 @@
+<form *ngIf="showAddTask" class="add-form" (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <label for="name">Name</label>
+    <input
+      type="text"
+      name="name"
+      [(ngModel)]="name"
+      id="name"
+      placeholder="Name"
+      maxlength="100"
+    />
+  </div>
+  <div class="form-control">
+    <label for="age">Age</label>
+    <input
+      type="text"
+      name="age"
+      [(ngModel)]="age"
+      id="age"
+      placeholder="Age"
+      
+    />
+  </div>
+  <div class="form-control form-control-check">
+    <label for="student">Are you a student?</label>
+    <input
+      type="checkbox"
+      name="student"
+      [(ngModel)]="student"
+      id="student"
+    />
+  </div>
+  <input type="submit" value="Save Task" class="btn btn-block" />
+</form>

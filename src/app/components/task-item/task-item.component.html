@@ -1,0 +1,15 @@
+<div
+  [ngClass]="{ reminder: student.studnet }"
+  class="task"
+  (dblclick)="onToggle(student)"
+>
+  <h3>
+    {{ student.name }}
+    <fa-icon
+      (click)="onDelete(student)"
+      [ngStyle]="{ color: 'red' }"
+      [icon]="faTimes"
+    ></fa-icon>
+  </h3>
+  <p>{{ student.age }}</p>
+</div>
